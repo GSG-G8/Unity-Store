@@ -1,0 +1,22 @@
+{
+  "name": "unity-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G8/Unity-Store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G8/Unity-Store/issues"
+  },
+  "homepage": "https://github.com/GSG-G8/Unity-Store#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
