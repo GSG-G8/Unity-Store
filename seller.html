@@ -33,7 +33,7 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Insert Your New Product</h2>
-                    <form >
+                    <form class="add-product-form">
                         <div class="seller-add-form">
                             <div class="content">
                                 <label>Product Name:</label>
@@ -41,11 +41,11 @@
                                 <label>Product Price:</label>
                                 <input type="number" name="price" value="" placeholder="Price" class="price">
                                 <label>Choose the category</label>
-                                <select class="category" name="">
-                                    <option value=""></option>
-                                    <option value="watchs">Watchs</option>
-                                    <option value="perfume">Perfumes</option>
-                                    <option value="accessories">Accessories</option>
+                                <select id="my-category" class="category" name="">
+                                    <option value="" ></option>
+                                    <option value="watchs">watchs</option>
+                                    <option value="perfume">perfume</option>
+                                    <option value="accessories">accessories</option>
                                 </select>
                                 <label>Product Image:</label>
                                 <input type="url" name="img-link" value="" placeholder="Img-link" class="image">
@@ -55,7 +55,7 @@
                                 <textarea name="details" rows="10" cols="80" placeholder="Details" class="details"></textarea>
                             </div>
                             <div class="submit-button">
-                                <button type="button" class="submit">Submit</button>
+                                <button class="submit-button" type="submit" class="submit">Submit</button>
                             </div>
                         </div>                       
                     </form>
@@ -64,8 +64,15 @@
             <!-- End seller add form -->
         </div>
     </header>
+    <section class="seller-product">
+        <div class="container-products">
+            
+        </div>
+    </section>
 
 
 
-    <script src="js/dom.js"></script></body>
+    <script src="js/dom.js"></script>
+    <script src="js/logic.js"></script>
+</body>
 </html>
