@@ -32,9 +32,38 @@ function addProduct(arr, obj) {
     return [...arr, obj];
 }
 
+// this function to remove a single product
+function removeProduct(arr, id) {
+    return arr.filter(pro=> pro.id!=id);
+}
+
+
+
+// this function to apply remove function and save to local and then renders products
+function removeThis()  {
+    products = removeProduct(products, this.proid);
+    saveLocal("products" ,products)
+    renderProduct(products);            
+}
+
+
+
 // Save To Local Storage 
 function saveLocal(keyName, storArr) {
     localStorage.setItem(keyName, JSON.stringify(storArr))
+}
+
+
+// search and filter product 
+let searchInput = document.querySelector('.search')
+function searchProduct(products, text) {
+    return products.filter(pro=> pro.title.includes(text));
+    
+}
+
+searchInput.onkeyup = function(){
+    let results = searchProduct(products, searchInput.value)
+    renderProduct(results);
 }
 
 // Load from Local Storage 
@@ -48,6 +77,11 @@ function renderProduct(products) {
     containerProducts.innerHTML = '';
     
     products.forEach(product => {
+        let remove = document.createElement('span');
+        remove.innerHTML= "<span>X</span>";
+        remove.proid = product.id;
+        remove.onclick = removeThis;
+
 
         let article = document.createElement('article');
         article.innerHTML = `
@@ -60,6 +94,8 @@ function renderProduct(products) {
 
         `;
         containerProducts.appendChild(article);
+        containerProducts.appendChild(remove);
+
     } )
         
     }
