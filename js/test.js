@@ -8,4 +8,10 @@ describe('Testing if object push  product array', () => {
 		var expected = 2;
 		expect(actual.length).toBe(expected);
 	});
+
+	test('Should return type of element', () => {
+		var actual = recive.product();
+		var expected = "object";
+		expect(typeof actual).toBe(expected);
+	});
 })
