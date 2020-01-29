@@ -2,9 +2,32 @@
 let products = loadLocal('products');
 
 let addFormButton = document.querySelector('.submit');
+// Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 // StART THE ADD FORM 
-
 addFormButton.onclick = function() {
     console.log("MOhasd")
     const titleInput = document.querySelector('.title');
@@ -26,26 +49,40 @@ addFormButton.onclick = function() {
     }
 }
 
-// Start render the products
+//Start display products
 function renderProduct(products) {
-  let containerProducts = document.querySelector('.container-products');
+  let containerProducts = document.querySelector('.seller-product');
   containerProducts.innerHTML = '';
   
   products.forEach(product => {
+      let remove = document.createElement('span');
+      remove.innerHTML= "<span>X</span>";
+      remove.proid = product.id;
+      remove.onclick = removeThis;
 
-      let article = document.createElement('article');
+
+      let article = document.createElement('div');
+      article.classList.add('seller-product__container-products');
       article.innerHTML = `
 
-          <div><img src = "${product.image}"></div>
-          <div> <h3>${product.category}</h3> </div>
-          <div> <h2>${product.title}</h2> </div>
-          <div> <h3>${product.price}</h3> </div>
-          <div> <p>${product.details}</p> </div>
-
+          
+              <img src = "${product.image}">
+              <h3>${product.category}</h3>
+              <h2>${product.title}</h2>
+              <h4>${product.price}</h4>
+              <p>${product.details}</p>
+          
       `;
       containerProducts.appendChild(article);
+      containerProducts.appendChild(remove);
+
   } )
       
-}
+  }
 
-renderProduct(products);
+  renderProduct(products);
+
+  searchInput.onkeyup = function(){
+    let results = searchProduct(products, searchInput.value)
+    renderProduct(results);
+}
