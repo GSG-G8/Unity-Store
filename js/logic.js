@@ -52,12 +52,13 @@ function renderProduct(products) {
         let article = document.createElement('article');
         article.innerHTML = `
 
-            <div><img src = "${product.image}"></div>
-            <div> <h3>${product.category}</h3> </div>
-            <div> <h2>${product.title}</h2> </div>
-            <div> <h3>${product.price}</h3> </div>
-            <div> <p>${product.details}</p> </div>
-
+            <div class="seller-product__container-products">
+                <img src = "${product.image}">
+                <h3>${product.category}</h3>
+                <h2>${product.title}</h2>
+                <h4>${product.price}</h4>
+                <p>${product.details}</p>
+            </div>
         `;
         containerProducts.appendChild(article);
     } )
