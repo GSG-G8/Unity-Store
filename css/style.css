@@ -234,7 +234,7 @@
   flex-wrap: wrap;
   width: 80%;
   margin: 50px auto;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .seller-product__container-products {
@@ -242,6 +242,7 @@
   margin-bottom: 25px;
   background-color: #202020;
   border-radius: 4px;
+  margin: 10px;
 }
 .seller-product__container-products img {
   width: 100%;
