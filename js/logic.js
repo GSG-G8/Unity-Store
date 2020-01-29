@@ -73,7 +73,7 @@ function loadLocal(keyname){
 }
 
 function renderProduct(products) {
-    let containerProducts = document.querySelector('.container-products');
+    let containerProducts = document.querySelector('.seller-product');
     containerProducts.innerHTML = '';
     
     products.forEach(product => {
@@ -83,15 +83,17 @@ function renderProduct(products) {
         remove.onclick = removeThis;
 
 
-        let article = document.createElement('article');
+        let article = document.createElement('div');
+        article.classList.add('seller-product__container-products');
         article.innerHTML = `
 
-            <div><img src = "${product.image}"></div>
-            <div> <h3>${product.category}</h3> </div>
-            <div> <h2>${product.title}</h2> </div>
-            <div> <h3>${product.price}</h3> </div>
-            <div> <p>${product.details}</p> </div>
-
+            
+                <img src = "${product.image}">
+                <h3>${product.category}</h3>
+                <h2>${product.title}</h2>
+                <h4>${product.price}</h4>
+                <p>${product.details}</p>
+            
         `;
         containerProducts.appendChild(article);
         containerProducts.appendChild(remove);
