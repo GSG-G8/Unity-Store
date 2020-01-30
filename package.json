@@ -1,7 +1,7 @@
 {
   "name": "unity-store",
   "version": "1.0.0",
-  "description": "",
+  "description": "[You can visit our site from this link](https://gsg-g8.github.io/Unity-Store/)",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage"

@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Marvel&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="main-page-header">
-
-        <div class="sty-nav">
-            <div class="logo">Unity Store</div>
-            <nav>
-              <div>
-                <i class="fa fa-opencart cart"></i>
-              </div>
-            </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Marvel&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>Buyer Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="buyer-page-header">
+      <nav class="buyer-page-header__nav">
+        <div class="logo">Unity Store</div>
+        <div class="cart-button">
+          <i class="fa fa-opencart cart"></i>
         </div>
-<br><br>
-        <div class="searchBox">
+      </nav>
 
-          <input class="searchInput"type="text" name="" placeholder="   Search">
+      <div class="searchBox">
+        <div class="buyer-search">
+          <input class="search" type="text" name="" placeholder="Search" />
+        </div>
+        <div class="sellect-category">
           <select class="selectButton">
+            <option value="all">All</option>
             <option value="Watches">Watches</option>
             <option value="Perfumes">Perfumes</option>
             <option value="Accesroies">Accesroies</option>
           </select>
-          <button class="searchButton" href="#">
-            <i class="material-icons">
-                search
-            </i>
-          </button>
+        </div>
+        <div class="grid-button-div">
+          <button class="grid-button">grid/list</button>
+        </div>
       </div>
-
-      <div>
-        <button class="grid-button">grid/list</button>
-      </div>
-
-
-    
     </header>
-    <section class="seller-product">
-        
-        
-    </section>
-  
+    <section class="seller-product"></section>
 
     <script src="js/buyer.js"></script>
-    
-</body>
+  </body>
 </html>
