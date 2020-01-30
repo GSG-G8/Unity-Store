@@ -77,8 +77,8 @@ function renderProduct(products) {
     containerProducts.innerHTML = '';
     
     products.forEach(product => {
-        let remove = document.createElement('span');
-        remove.innerHTML= "<span>X</span>";
+        let remove = document.createElement('div');
+        remove.innerHTML= "<span>Delete Product</span>";
         remove.proid = product.id;
         remove.onclick = removeThis;
 
@@ -96,7 +96,7 @@ function renderProduct(products) {
             
         `;
         containerProducts.appendChild(article);
-        containerProducts.appendChild(remove);
+        article.appendChild(remove);
 
     } )
         

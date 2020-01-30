@@ -8,12 +8,12 @@
 }
 
 /* The Main Page Style*/
-
-
-  .main-page-header {
+  .index-page-header{
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
   }
+
 
   .main-header-content{
     margin: auto;
@@ -23,10 +23,7 @@
   }
 
   .btn-styles {
-      border: 2px solid rgb(243, 243, 243); 
-      width: 50px;
-      margin-top: 25px;
-      padding: 15px;
+      padding: 15px 45px;
       border: 1px solid white;
       border-radius: 30px;
       width: 200px;
@@ -34,12 +31,11 @@
       background-color: transparent;
       color: white;
       font-weight: bold;
-      font-size: 17px;
+      font-size: 25px;
       outline: none;
       cursor: pointer;
       text-decoration: none;
-      font-family: 'Marvel', sans-serif;
-
+      margin: 0 5px;
 
   }
 
@@ -48,21 +44,38 @@
     color: white;
     margin-bottom: 50px;
     letter-spacing: 10px;
-    font-size: 57px;
+    font-size: 65px;
 
   }
 
+  
 
-.main-header-content button:hover {
-    background-color:rgb(200, 200, 200);
-  }
 
 /*End of the Main Page Style*/
 
-.container{
-    width: 80%;
-    margin: 0 auto;
+
+/* start seller style */
+.seller-navbar {
+  padding: 30px 0 10px 90px;
+  color: white;
 }
+
+
+.seller-navbar h3 {
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+.seller-header__container {
+    width: 80%;
+    margin: 15px auto;
+    display: flex;
+}
+.search-input {
+  width: 40%;
+}
+
+
+
 .seller-header {
     display: flex;
     justify-content: space-between;
@@ -78,12 +91,29 @@
 } 
 
 .seller-header .search{
-  width:500px;
+  width: 100%;
+    border-radius: 6px;
+    font-size: 20px;
+    background-color: #b92e2e00;
+    border: 0.5px solid #f1eded;
+    height: 50px;
+    padding-left: 25px;
+    color: white;
+}
+
+.seller-header_button {
+  font-weight: bold;
+  margin-left: 25px;
+  padding: 8px;
+  background-color: transparent;
+  color: white;
+  border: 0.5px solid #f1eded;
   border-radius: 6px;
   font-size: 20px;
-  background-color: transparent;
-  border: 0.4px solid #dddddd;
-  height: 50px;
+}
+
+.fa-plus {
+  color: #CB9400;
 }
 
 /* /////////////////////////////////////////////////////////// */
@@ -155,74 +185,89 @@
 
   /* The Buyer Page Style */
 
-  .sty-nav{
+  .buyer-page-header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
+  .buyer-page-header__nav {
     width: 100%;
+    display: flex;
+    margin: 30px 20px 30px;
   }
 
   .logo {
-    font-size: 35px;
+    width: 80%;
     font-weight: bold;
     color: white;
-    height: 35px;
     display: inline-block;
-    margin-left: 20px;
-    margin-top: 30px;
-    
+    padding-left: 70px;
+    font-size: 35px;
+    letter-spacing: 3px;
   }
 
-  .cart{
+  .cart-button{
+    width: 20%;
       color: white;
       float:right;
-      margin-right: 50px;
+  }
+  .cart {
+    font-size: 25px;
+    background-color: #CB9400;
+    padding: 8px;
   }
 
-  .searchBox{
-    margin-left: 100px;
-    margin-top: 60px;
-   
-    /*margin-right: 00px;*/
-  }
 
-  .searchInput{
-    width:500px;
-    height: 40px;
+  .search {
+    width: 100%;
     border-radius: 6px;
     font-size: 20px;
-    background-color: transparent;
-    border: 0.4px solid #dddddd;
+    background-color: #b92e2e00;
+    border: 0.5px solid #f1eded;
     height: 50px;
-    padding: 8px;
-    color: white
+    padding-left: 25px;
+    color: white;
   }
-
-  .searchButton{
-    width:100px;
-    height: 40px;
-    border-radius: 30px;
-    font-size: 20px;
-    margin-left: 10px;
+  .searchBox {
+    display: flex;
+    width: 80%;
+    margin: 15px auto;
+  }
+    
+  .buyer-search {
+    width: 40%;
   }
 
   .selectButton{
-    width:90px;
-    height: 40px;
-    border-radius: 30px;
+    font-weight: bold;
+    margin-left: 25px;
+    padding: 8px;
+    background-color: transparent;
+    color: #CB9400;
+    border: 0.5px solid #f1eded;
+    border-radius: 6px;
     font-size: 20px;
-    margin-left: 10px;
+    height: 100%;
   }
 
 
   .grid-button{
-    width:100px;
-    height: 40px;
-    border-radius: 30px;
-    margin-left: 10px;
-    margin-top: 60px;
+    font-weight: bold;
+    margin-left: 25px;
+    padding: 8px 18px;
+    background-color: transparent;
+    color: white;
+    border: 0.5px solid #f1eded;
+    border-radius: 6px;
     font-size: 20px;
+    height: 100%;
 
   }
   
+  
 
+  
   /* End of Buyer Page */
 
 
@@ -236,15 +281,37 @@
   flex-wrap: wrap;
   width: 80%;
   margin: 50px auto;
-  justify-content: center;
+  justify-content: left;
 }
 
+.seller-product__container-products div {
+  width: 100%;
+  margin: 8px auto;
+  text-align: center
+}
+.seller-product__container-products div span {
+  display: inline-block;
+  color: rgb(203, 148, 0);
+  font-weight: bold;
+  border: 1px solid;
+  padding: 5px;
+  margin: 0 auto;
+  width: 110px;
+  text-align: center;
+}
+
+
 .seller-product__container-products {
-  width: 21%;
-  margin-bottom: 25px;
+  width: 22%;
   background-color: #202020;
   border-radius: 4px;
   margin: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.edit-button {
+  margin-top: 10px;
 }
 .seller-product__container-products img {
   width: 100%;
@@ -304,3 +371,85 @@
   }
 }
   
+
+
+@media only screen and (max-width: 600px) {
+  .main-header-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    justify-content: center;
+  }
+  .main-header-content h1{
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  font-size: 40px;
+  width: 100%;
+  }
+  .btn-styles {
+    width: 60%;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .seller-navbar{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 10px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .seller-header__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .search-input {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .seller-header_button {
+    width: 50%;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .searchBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .buyer-search{
+    width: 100%;
+    margin-bottom: 25px;
+    
+  }
+  .selectButton{
+    margin-left: 0;
+    width: 120px;
+  }
+  .sellect-category{
+    flex: 1;
+    text-align: center;
+    
+  }
+  .grid-button {
+    margin-left: 0;
+    width: 120px;
+  }
+  .grid-button-div {
+    flex: 1;
+    text-align: center;
+  }
+  .logo{
+    width: 83%;
+  }
+  .cart-button{
+    width: 17%;
+  }
+
+
+}
