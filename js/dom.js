@@ -1,4 +1,3 @@
-
 let products = loadLocal('products');
 
 let addFormButton = document.querySelector('.submit');
@@ -29,7 +28,6 @@ window.onclick = function(event) {
   }
 // StART THE ADD FORM 
 addFormButton.onclick = function() {
-    console.log("MOhasd")
     const titleInput = document.querySelector('.title');
     const priceInput = document.querySelector('.price');
     const detailsInput = document.querySelector('.details');
@@ -80,9 +78,39 @@ function renderProduct(products) {
       
   }
 
-  renderProduct(products);
-
-  searchInput.onkeyup = function(){
+searchInput.onkeyup = function(){
     let results = searchProduct(products, searchInput.value)
     renderProduct(results);
+}
+
+function renderProductBuyer(products) {
+  let buyerProducts = document.querySelector('.buyer-view-products');
+  buyerProducts.innerHTML = '';
+  
+  products.forEach(product => {
+      let article = document.createElement('div');
+      article.classList.add('seller-product__container-products');
+      article.innerHTML = `
+
+          
+              <img src = "${product.image}">
+              <h3>${product.category}</h3>
+              <h2>${product.title}</h2>
+              <h4>${product.price}</h4>
+              <p>${product.details}</p>
+          
+      `;
+      buyerProducts.appendChild(article);
+
+  } )
+      
+  }
+  renderProduct(products);
+
+
+// this function to apply remove function and save to local and then renders products
+function removeThis()  {
+  products = removeProduct(products, this.proid);
+  saveLocal("products" ,products)
+  renderProduct(products);            
 }

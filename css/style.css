@@ -11,13 +11,8 @@
 
 
   .main-page-header {
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     flex-wrap: wrap;
-    height: 100vh;
-    position: relative;
   }
 
   .main-header-content{
@@ -83,9 +78,12 @@
 } 
 
 .seller-header .search{
-    width: 300px;
-    height: 25px;
-    padding: 5px;
+  width:500px;
+  border-radius: 6px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 0.4px solid #dddddd;
+  height: 50px;
 }
 
 /* /////////////////////////////////////////////////////////// */
@@ -179,7 +177,6 @@
   }
 
   .searchBox{
-    margin-bottom: 800px;
     margin-left: 100px;
     margin-top: 60px;
    
@@ -189,8 +186,13 @@
   .searchInput{
     width:500px;
     height: 40px;
-    border-radius: 30px;
+    border-radius: 6px;
     font-size: 20px;
+    background-color: transparent;
+    border: 0.4px solid #dddddd;
+    height: 50px;
+    padding: 8px;
+    color: white
   }
 
   .searchButton{
@@ -214,7 +216,7 @@
     width:100px;
     height: 40px;
     border-radius: 30px;
-    margin-left: 900px;
+    margin-left: 10px;
     margin-top: 60px;
     font-size: 20px;
 

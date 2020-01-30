@@ -1,7 +1,5 @@
 let recive = require('../js/logic.js');
 
-
-
 describe('Testing if object push  product array', () => {
 	test('Should return length of array + 1 when push object', () => {
 		var actual = recive.addProduct(["1"], "2");
@@ -20,11 +18,48 @@ describe('Testing if object push  product array', () => {
 		var expected = "3"
 		expect(actual).toContain(expected);
 	});
-	
-	test('Test if the function search products or not', () => {
-		var actual = recive.searchProduct([{title: "black", price:33}, {title: "white", price:44}], "black");
-		var expected = [{title: "black", price:33}];
-		expect(actual).toBe(expected);
+
+
+	test('Test the search function', () => {
+		var actual = recive.searchProduct([
+			{ id: 1, title: "black" },
+			{ id: 2, title: "watch" },
+			{ id: 3, title: "perfume" }
+		], "black");
+		var expected = [{ id: 1, title: "black" }];
+		expect(actual).toEqual(expected);
+	});
+
+	test('Test the search function', () => {
+		var actual = recive.searchProduct([
+			{ id: 1, title: "black" },
+			{ id: 2, title: "watch" },
+			{ id: 3, title: "perfume" }
+		], "BLACK");
+		var expected = [{ id: 1, title: "black" }];
+		expect(actual).toEqual(expected);
+	});
+	test('Test the search function', () => {
+		var actual = recive.searchProduct([
+			{ id: 1, title: "black" },
+			{ id: 2, title: "watch" },
+			{ id: 3, title: "perfume" }
+		], "BLAck");
+		var expected = [{ id: 1, title: "black" }];
+		expect(actual).toEqual(expected);
+	});
+	test('Test the search function', () => {
+		var actual = recive.searchProduct([
+			{ id: 1, title: "black" },
+			{ id: 2, title: "watch" },
+			{ id: 3, title: "perfume" }
+		], "");
+		var expected = [
+			{ id: 1, title: "black" },
+			{ id: 2, title: "watch" },
+			{ id: 3, title: "perfume" }
+		];
+		expect(actual).toEqual(expected);
 	});
 
 })
