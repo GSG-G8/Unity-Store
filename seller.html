@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Seller Page</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Marvel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,23 +12,17 @@
 </head>
 <body>
 
-    <navbar class="seller-navbar">
-        <div class="container">
-            <h3 class="seller-logo">UNITY STORE</h3>
-        </div>   
-    </navbar>
+    <nav class="seller-navbar">
+        <h3 class="seller-logo">Unity Store</h3>  
+    </nav>
     <header class="seller-header">
-        <div class="container">
-            <input type="search" name="search" value="" placeholder="search..." class="search">
-            <button class="ser">search</button>
+        <div class="seller-header__container">
+            <div class="search-input">
+                <input type="search" name="search" value="" placeholder="search..." class="search">
+            </div>
+            <button id="myBtn" class="seller-header_button"> Add Product <i class="fa fa-plus seller-add"></i></button>
 
-
-            <!-- Buttons to choose list or grid view
-            <button onclick="listView()"><i class="fa fa-bars"></i> List</button>
-            <button onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button> -->
-            
             <!-- start Seller add form -->
-            <button id="myBtn"><i class="fa fa-plus seller-add"></i></button>
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -55,7 +49,7 @@
                                 <textarea maxlength="80" name="details" rows="10" cols="80" placeholder="Details" class="details"></textarea>
                             </div>
                             <div class="submit-button">
-                                <button class="submit-button" type="submit" class="submit">Submit</button>
+                                <button type="submit" class="submit">Submit</button>
                             </div>
                         </div>                       
                     </form>
