@@ -1,71 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Seller Page</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Marvel&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Marvel&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <nav class="seller-navbar">
-        <h3 class="seller-logo">Unity Store</h3>  
+      <h3 class="seller-logo">Unity Store</h3>
     </nav>
     <header class="seller-header">
-        <div class="seller-header__container">
-            <div class="search-input">
-                <input type="search" name="search" value="" placeholder="search..." class="search">
-            </div>
-            <button id="myBtn" class="seller-header_button"> Add Product <i class="fa fa-plus seller-add"></i></button>
-
-            <!-- start Seller add form -->
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Insert Your New Product</h2>
-                    <form class="add-product-form">
-                        <div class="seller-add-form">
-                            <div class="content">
-                                <label>Product Name:</label>
-                                <input type="text" name="title" value="" placeholder="Title" class="title">
-                                <label>Product Price:</label>
-                                <input type="number" name="price" value="" placeholder="Price" class="price">
-                                <label>Choose the category</label>
-                                <select id="my-category" class="category" name="">
-                                    <option value="all" >all</option>
-                                    <option value="watchs">watchs</option>
-                                    <option value="perfume">perfume</option>
-                                    <option value="accessories">accessories</option>
-                                </select>
-                                <label>Product Image:</label>
-                                <input type="url" name="img-link" value="" placeholder="Img-link" class="image">
-                            </div>
-                            <div class="text">
-                                <label>Insert the product details:</label>
-                                <textarea maxlength="80" name="details" rows="10" cols="80" placeholder="Details" class="details"></textarea>
-                            </div>
-                            <div class="submit-button">
-                                <button type="submit" class="submit">Submit</button>
-                            </div>
-                        </div>                       
-                    </form>
-                </div>
-            </div>
-            <!-- End seller add form -->
+      <div class="seller-header__container">
+        <div class="search-input">
+          <input
+            type="search"
+            name="search"
+            value=""
+            placeholder="search..."
+            class="search"
+          />
         </div>
+        <button id="myBtn" class="seller-header_button">
+          Add Product <i class="fa fa-plus seller-add"></i>
+        </button>
+
+        <!-- start Seller add form -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Insert Your New Product</h2>
+            <form class="add-product-form">
+              <div class="seller-add-form">
+                <div class="content">
+                  <label>Product Name:</label>
+                  <input
+                    type="text"
+                    name="title"
+                    value=""
+                    placeholder="Title"
+                    class="title"
+                  />
+                  <label>Product Price:</label>
+                  <input
+                    type="number"
+                    name="price"
+                    value=""
+                    placeholder="Price"
+                    class="price"
+                  />
+                  <label>Choose the category</label>
+                  <select id="my-category" class="category" name="">
+                    <option value="all">all</option>
+                    <option value="watchs">watchs</option>
+                    <option value="perfume">perfume</option>
+                    <option value="accessories">accessories</option>
+                  </select>
+                  <label>Product Image:</label>
+                  <input
+                    type="url"
+                    name="img-link"
+                    value=""
+                    placeholder="Img-link"
+                    class="image"
+                  />
+                </div>
+                <div class="text">
+                  <label>Insert the product details:</label>
+                  <textarea
+                    maxlength="80"
+                    name="details"
+                    rows="10"
+                    cols="80"
+                    placeholder="Details"
+                    class="details"
+                  ></textarea>
+                </div>
+                <div class="submit-button">
+                  <button type="submit" class="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- End seller add form -->
+      </div>
     </header>
-    <section class="seller-product">
-        
-        
-    </section>
+    <section class="seller-product"></section>
 
-
-
-    <script src="js/dom.js"></script>
     <script src="js/logic.js"></script>
     <script src="js/testData.js"></script>
 </body>
